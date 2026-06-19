@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* URL pública del sitio — cámbiala cuando subas a GitHub */
-const SITE_URL = 'https://jairopotosme.github.io/Web_BambuSkin.github.io/';
+const SITE_URL = 'https://jairopotosme.github.io/Web_BambuSkin/';
 
 function getPageUrl() {
   const hostname = window.location.hostname;
@@ -203,7 +203,9 @@ document.querySelectorAll('.galeria__item').forEach(item => {
 /* ---- QR Code Generator ---- */
 function initQRCode() {
   const container = document.getElementById('qrcode');
-  const urlText = document.getElementById('qr-url-text');
+  const urlInput = document.getElementById('qr-url-input');
+  const copyBtn = document.getElementById('qr-copy');
+  const copyMainBtn = document.getElementById('qr-copy-main');
   const downloadBtn = document.getElementById('qr-download');
   const notice = document.getElementById('qr-notice');
 
@@ -212,11 +214,11 @@ function initQRCode() {
   const pageUrl = getPageUrl();
   const isPublished = window.location.hostname.includes('github.io');
 
-  urlText.textContent = pageUrl;
+  if (urlInput) urlInput.value = pageUrl;
 
   if (isPublished && notice) {
     notice.className = 'qr__notice qr__notice--live';
-    notice.innerHTML = '<i class="fa-solid fa-circle-check"></i><span>Tu sitio está publicado. Escanea el QR para abrirlo en cualquier dispositivo.</span>';
+    notice.innerHTML = '<i class="fa-solid fa-circle-check"></i><span>Tu sitio está publicado. Copia el enlace o escanea el QR para compartirlo.</span>';
   }
 
   new QRCode(container, {
@@ -227,6 +229,15 @@ function initQRCode() {
     colorLight: '#ffffff',
     correctLevel: QRCode.CorrectLevel.H
   });
+
+  if (copyBtn) copyBtn.addEventListener('click', () => copyPageUrl(pageUrl, copyBtn));
+  if (copyMainBtn) copyMainBtn.addEventListener('click', () => copyPageUrl(pageUrl, copyMainBtn));
+  if (urlInput) {
+    urlInput.addEventListener('click', () => {
+      urlInput.focus();
+      urlInput.select();
+    });
+  }
 
   downloadBtn.addEventListener('click', () => {
     const img = container.querySelector('img');
@@ -244,4 +255,43 @@ function initQRCode() {
 
     link.click();
   });
+}
+
+async function copyPageUrl(url, button) {
+  const urlInput = document.getElementById('qr-url-input');
+  const copySmallBtn = document.getElementById('qr-copy');
+  const originalHtml = button.innerHTML;
+  const isSmallBtn = button === copySmallBtn;
+
+  try {
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(url);
+    } else if (urlInput) {
+      urlInput.focus();
+      urlInput.select();
+      document.execCommand('copy');
+    }
+  } catch {
+    if (urlInput) {
+      urlInput.focus();
+      urlInput.select();
+      document.execCommand('copy');
+    }
+  }
+
+  if (isSmallBtn) {
+    button.classList.add('copied');
+    button.innerHTML = '<i class="fa-solid fa-check"></i><span>¡Copiado!</span>';
+    setTimeout(() => {
+      button.classList.remove('copied');
+      button.innerHTML = '<i class="fa-solid fa-copy"></i><span>Copiar</span>';
+    }, 2000);
+  } else {
+    button.classList.add('btn--copied');
+    button.innerHTML = '<span>¡Enlace copiado!</span><i class="fa-solid fa-check"></i>';
+    setTimeout(() => {
+      button.classList.remove('btn--copied');
+      button.innerHTML = originalHtml;
+    }, 2000);
+  }
 }

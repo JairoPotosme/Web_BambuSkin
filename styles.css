@@ -210,6 +210,23 @@ ul {
   transform: translateY(3px);
 }
 
+.btn--secondary {
+  background: var(--color-white);
+  color: var(--color-primary-dark);
+  border: 2px solid var(--color-primary-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn--secondary:hover {
+  background: var(--color-accent-soft);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn--copied {
+  background: linear-gradient(135deg, #2d6a4f 0%, #40916c 100%) !important;
+}
+
 /* ---- Header / Nav ---- */
 .header {
   position: fixed;
@@ -1519,12 +1536,56 @@ ul {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 16px 20px;
+  padding: 8px 8px 8px 16px;
   background: var(--color-white);
   border: 1px solid var(--color-gray-200);
   border-radius: var(--radius-sm);
-  margin: 24px 0;
-  word-break: break-all;
+  margin: 24px 0 16px;
+}
+
+.qr__url-input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  background: transparent;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--color-primary-dark);
+  outline: none;
+  cursor: text;
+  user-select: all;
+  -webkit-user-select: all;
+}
+
+.qr__copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition);
+  flex-shrink: 0;
+}
+
+.qr__copy-btn:hover {
+  background: var(--color-primary-light);
+}
+
+.qr__copy-btn.copied {
+  background: var(--color-primary-dark);
+}
+
+.qr__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .qr__notice {
@@ -1560,11 +1621,6 @@ ul {
 .qr__url-box i {
   color: var(--color-primary);
   flex-shrink: 0;
-}
-
-.qr__url-box span {
-  font-size: 0.9rem;
-  color: var(--color-gray-600);
 }
 
 .qr__card {
@@ -1845,6 +1901,20 @@ ul {
 
   .qr__content .btn {
     margin: 0 auto;
+  }
+
+  .qr__actions {
+    justify-content: center;
+  }
+
+  .qr__url-box {
+    flex-wrap: wrap;
+    padding: 12px;
+  }
+
+  .qr__copy-btn {
+    width: 100%;
+    justify-content: center;
   }
 
   .footer__bottom {

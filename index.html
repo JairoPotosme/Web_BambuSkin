@@ -605,12 +605,22 @@
           </div>
           <div class="qr__url-box">
             <i class="fa-solid fa-link"></i>
-            <span id="qr-url-text">Cargando enlace...</span>
+            <input type="text" id="qr-url-input" class="qr__url-input" readonly value="https://jairopotosme.github.io/Web_BambuSkin/">
+            <button type="button" class="qr__copy-btn" id="qr-copy" aria-label="Copiar enlace">
+              <i class="fa-solid fa-copy"></i>
+              <span>Copiar</span>
+            </button>
           </div>
-          <button type="button" class="btn btn--primary" id="qr-download">
-            <span>Descargar QR</span>
-            <i class="fa-solid fa-download"></i>
-          </button>
+          <div class="qr__actions">
+            <button type="button" class="btn btn--primary" id="qr-copy-main">
+              <span>Copiar enlace</span>
+              <i class="fa-solid fa-link"></i>
+            </button>
+            <button type="button" class="btn btn--secondary" id="qr-download">
+              <span>Descargar QR</span>
+              <i class="fa-solid fa-download"></i>
+            </button>
+          </div>
         </div>
         <div class="qr__card reveal">
           <div class="qr__card-inner">

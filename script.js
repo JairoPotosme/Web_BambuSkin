@@ -1,9 +1,10 @@
 /* ============================================
-   BambuSkin Lab — JavaScript Interactions
+   BambooSkin Lab — JavaScript Interactions
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
+  initNavActive();
   initScrollReveal();
   initCounters();
   initCircleCharts();
@@ -51,6 +52,33 @@ function initNavigation() {
       document.body.style.overflow = '';
     });
   });
+}
+
+/* ---- Active nav link on scroll ---- */
+function initNavActive() {
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav__link');
+
+  if (!sections.length || !navLinks.length) return;
+
+  const setActive = (id) => {
+    navLinks.forEach(link => {
+      link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+    });
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        setActive(entry.target.id);
+      }
+    });
+  }, {
+    threshold: 0.25,
+    rootMargin: '-90px 0px -55% 0px'
+  });
+
+  sections.forEach(section => observer.observe(section));
 }
 
 /* ---- Scroll Reveal ---- */
@@ -183,11 +211,25 @@ function initSmoothScroll() {
 
 /* ---- Parallax on Hero ---- */
 window.addEventListener('scroll', () => {
-  const hero = document.querySelector('.hero__bg-img');
-  if (hero && window.innerWidth > 768) {
+  const watermark = document.querySelector('.hero__logo-watermark');
+  const glow = document.querySelector('.hero__logo-glow');
+  if (window.innerWidth > 768 && watermark) {
     const scrolled = window.scrollY;
-    hero.style.transform = `scale(1.05) translateY(${scrolled * 0.3}px)`;
+    watermark.style.transform = `translate(-50%, calc(-50% + ${scrolled * 0.15}px)) scale(1)`;
+    if (glow) {
+      glow.style.transform = `translate(-50%, calc(-52% + ${scrolled * 0.1}px)) scale(1)`;
+    }
   }
+});
+
+/* ---- Gallery tilt effect ---- */
+document.querySelectorAll('.galeria__item, .beneficios__showcase-item').forEach(item => {
+  item.addEventListener('mouseenter', () => {
+    item.style.transform = 'translateY(-4px)';
+  });
+  item.addEventListener('mouseleave', () => {
+    item.style.transform = '';
+  });
 });
 
 /* ---- Gallery Lightbox Effect ---- */
@@ -243,7 +285,7 @@ function initQRCode() {
     const img = container.querySelector('img');
     const canvas = container.querySelector('canvas');
     const link = document.createElement('a');
-    link.download = 'bambuskin-lab-qr.png';
+    link.download = 'bambooskin-lab-qr.png';
 
     if (img && img.src) {
       link.href = img.src;

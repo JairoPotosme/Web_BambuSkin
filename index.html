@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="BambuSkin Lab — Exfoliante y limpiador facial natural elaborado con esencia de bambú. La ciencia natural del cuidado facial.">
-  <title>BambuSkin Lab | La ciencia natural del cuidado facial</title>
+  <meta name="description" content="BambooSkin Lab — Exfoliante y limpiador facial natural elaborado con esencia de bamboo. La ciencia natural del cuidado facial.">
+  <title>BambooSkin Lab | La ciencia natural del cuidado facial</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -13,12 +13,25 @@
 </head>
 <body>
 
+  <!-- Fondo natural global -->
+  <div class="page-bg" aria-hidden="true">
+    <img src="images/fondo-natural.png" alt="">
+    <div class="page-bg__overlay"></div>
+  </div>
+
+  <!-- Decoración flotante global -->
+  <div class="floating-leaves" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+
   <!-- Navegación -->
   <header class="header" id="header">
+    <div class="header__bg" aria-hidden="true"></div>
+    <div class="header__shine" aria-hidden="true"></div>
     <nav class="nav container">
       <a href="#inicio" class="nav__logo">
-        <span class="nav__logo-icon"><i class="fa-solid fa-leaf"></i></span>
-        BambuSkin<span class="nav__logo-accent">Lab</span>
+        <img src="images/logo.png" alt="BambooSkin Lab" class="nav__logo-img">
+        BambooSkin<span class="nav__logo-accent">Lab</span>
       </a>
       <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menú">
         <span></span>
@@ -29,12 +42,11 @@
         <li><a href="#inicio" class="nav__link">Inicio</a></li>
         <li><a href="#producto" class="nav__link">Producto</a></li>
         <li><a href="#beneficios" class="nav__link">Beneficios</a></li>
-        <li><a href="#bambu" class="nav__link">El Bambú</a></li>
+        <li><a href="#bamboo" class="nav__link">El Bamboo</a></li>
         <li><a href="#estadisticas" class="nav__link">Investigación</a></li>
         <li><a href="#mercado" class="nav__link">Mercado</a></li>
         <li><a href="#sostenibilidad" class="nav__link">Sostenibilidad</a></li>
         <li><a href="#galeria" class="nav__link">Galería</a></li>
-        <li><a href="#testimonios" class="nav__link">Testimonios</a></li>
         <li><a href="#qr" class="nav__link">QR</a></li>
       </ul>
     </nav>
@@ -43,20 +55,26 @@
   <!-- Hero Section -->
   <section class="hero" id="inicio">
     <div class="hero__bg">
-      <img src="https://images.unsplash.com/photo-1501004318641-b39e95f59019?w=1920&q=80" alt="Bambú natural en la naturaleza" class="hero__bg-img">
+      <img src="images/producto-jarras.png" alt="" class="hero__photo" aria-hidden="true">
+      <div class="hero__gradient"></div>
+      <div class="hero__logo-glow" aria-hidden="true"></div>
+      <img src="images/logo.png" alt="" class="hero__logo-watermark" aria-hidden="true">
       <div class="hero__overlay"></div>
     </div>
     <div class="hero__content container">
+      <div class="hero__logo-wrap reveal">
+        <img src="images/logo.png" alt="Logo BambooSkin Lab" class="hero__logo">
+      </div>
       <div class="hero__badge reveal">
         <i class="fa-solid fa-seedling"></i>
         Dermocosmética Natural · Hecho en Nicaragua
       </div>
       <h1 class="hero__title reveal">
-        BambuSkin<span class="hero__title-accent">Lab</span>
+        BambooSkin<span class="hero__title-accent">Lab</span>
       </h1>
       <p class="hero__slogan reveal">La ciencia natural del cuidado facial.</p>
       <p class="hero__desc reveal">
-        Exfoliante y limpiador facial dermatológicamente formulado con esencia pura de bambú. Una alternativa natural, accesible y sostenible para el cuidado de la piel en el clima tropical nicaragüense.
+        Exfoliante y limpiador facial dermatológicamente formulado con esencia pura de bamboo. Una alternativa natural, accesible y sostenible para el cuidado de la piel en el clima tropical nicaragüense.
       </p>
       <a href="#producto" class="btn btn--primary reveal">
         <span>Conocer más</span>
@@ -69,34 +87,42 @@
     </div>
   </section>
 
+  <div class="wave-divider wave-divider--hero">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,50 1440,40 L1440,80 L0,80 Z" fill="#f0ebe3"/></svg>
+  </div>
+
   <!-- Sobre el Producto -->
-  <section class="producto section" id="producto">
+  <section class="producto section section--warm" id="producto">
     <div class="container">
       <div class="producto__grid">
         <div class="producto__image reveal">
           <div class="producto__image-wrapper">
-            <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80" alt="Producto de skincare natural">
+            <img src="images/producto-bolsa.png" alt="Producto BambooSkin Lab — bolsa de marca">
             <div class="producto__image-badge">
               <i class="fa-solid fa-flask"></i>
               100% Natural
             </div>
           </div>
+          <div class="producto__image-secondary">
+            <img src="images/producto-frasco.png" alt="Exfoliante de bambú BambooSkin Lab">
+            <img src="images/producto-linea.png" alt="Línea completa BambooSkin Lab">
+          </div>
           <div class="producto__floating-card reveal">
             <i class="fa-solid fa-spa"></i>
             <div>
-              <strong>Esencia de Bambú</strong>
+              <strong>Esencia de Bamboo</strong>
               <span>Ingrediente estrella</span>
             </div>
           </div>
         </div>
-        <div class="producto__content">
+        <div class="producto__content producto__content--card">
           <span class="section__tag reveal">Sobre el producto</span>
           <h2 class="section__title reveal">Innovación natural para Nicaragua</h2>
           <p class="section__text reveal">
-            <strong>BambuSkin Lab</strong> es un exfoliante y limpiador facial dermatológicamente formulado a base de esencia pura de bambú, diseñado para brindar limpieza profunda, regeneración celular, hidratación y cuidado natural de la piel.
+            <strong>BambooSkin Lab</strong> es un exfoliante y limpiador facial dermatológicamente formulado a base de esencia pura de bamboo, diseñado para brindar limpieza profunda, regeneración celular, hidratación y cuidado natural de la piel.
           </p>
           <p class="section__text reveal">
-            En Nicaragua, los productos dermatológicos de calidad suelen costar entre 500 y 1,500 córdobas, inaccesibles para gran parte de la población. BambuSkin Lab surge como alternativa nacional que aprovecha recursos locales —como el bambú de Rivas, Matagalpa y Jinotega— para ofrecer un producto efectivo, seguro y económicamente accesible.
+            En Nicaragua, los productos dermatológicos de calidad suelen costar entre 500 y 1,500 córdobas, inaccesibles para gran parte de la población. BambooSkin Lab surge como alternativa nacional que aprovecha recursos locales —como el bamboo de Rivas, Matagalpa y Jinotega— para ofrecer un producto efectivo, seguro y económicamente accesible.
           </p>
           <p class="section__text reveal">
             Formulado para el clima tropical nicaragüense —alta temperatura, humedad y exposición solar— elimina impurezas y células muertas sin dañar la barrera cutánea, ideal para pieles grasas, mixtas y sensibles.
@@ -106,7 +132,7 @@
               <div class="producto__feature-icon"><i class="fa-solid fa-leaf"></i></div>
               <div>
                 <h4>Recursos Naturales Locales</h4>
-                <p>Esencia de bambú cultivado en Nicaragua</p>
+                <p>Esencia de bamboo cultivado en Nicaragua</p>
               </div>
             </div>
             <div class="producto__feature">
@@ -142,66 +168,93 @@
       <div class="section__header reveal">
         <span class="section__tag">Beneficios principales</span>
         <h2 class="section__title">Todo lo que tu piel necesita</h2>
-        <p class="section__subtitle">Descubre los múltiples beneficios de la esencia de bambú en cada aplicación.</p>
+        <p class="section__subtitle">Descubre los múltiples beneficios de la esencia de bamboo en cada aplicación.</p>
+      </div>
+      <div class="beneficios__showcase reveal">
+        <div class="beneficios__showcase-item beneficios__showcase-item--info">
+          <img src="images/info-modo-uso.png" alt="Modo de uso del exfoliante">
+          <span>Rutina diaria</span>
+        </div>
+        <div class="beneficios__showcase-item">
+          <img src="images/producto-frasco.png" alt="Exfoliante de bambú">
+          <span>Piel radiante</span>
+        </div>
+        <div class="beneficios__showcase-item">
+          <img src="images/bamboo-natural.png" alt="Bamboo natural">
+          <span>Bamboo puro</span>
+        </div>
       </div>
       <div class="beneficios__grid">
         <div class="beneficio-card reveal">
+          <div class="beneficio-card__img"><img src="images/producto-frasco.png" alt="Regeneración celular"></div>
           <div class="beneficio-card__icon"><i class="fa-solid fa-dna"></i></div>
           <h3>Regeneración celular</h3>
           <p>Estimula la renovación natural de la piel, promoviendo una tez más joven y vital.</p>
         </div>
         <div class="beneficio-card reveal">
+          <div class="beneficio-card__img"><img src="images/producto-tubo-1.png" alt="Limpieza profunda"></div>
           <div class="beneficio-card__icon"><i class="fa-solid fa-broom"></i></div>
           <h3>Limpieza profunda</h3>
           <p>Penetra en los poros eliminando impurezas, contaminación y residuos acumulados.</p>
         </div>
         <div class="beneficio-card reveal">
+          <div class="beneficio-card__img"><img src="images/producto-tubo-2.png" alt="Control de grasa"></div>
           <div class="beneficio-card__icon"><i class="fa-solid fa-oil-can"></i></div>
           <h3>Control del exceso de grasa</h3>
           <p>Regula la producción de sebo sin resecar, ideal para pieles mixtas y grasas.</p>
         </div>
         <div class="beneficio-card reveal">
+          <div class="beneficio-card__img"><img src="images/producto-linea.png" alt="Hidratación"></div>
           <div class="beneficio-card__icon"><i class="fa-solid fa-droplet"></i></div>
           <h3>Hidratación natural</h3>
           <p>Mantiene el equilibrio hídrico de la piel con ingredientes botánicos hidratantes.</p>
         </div>
         <div class="beneficio-card reveal">
+          <div class="beneficio-card__img"><img src="images/producto-jarras.png" alt="Antioxidantes"></div>
           <div class="beneficio-card__icon"><i class="fa-solid fa-shield-halved"></i></div>
           <h3>Antioxidantes naturales</h3>
           <p>Protege contra los radicales libres y el estrés oxidativo del día a día.</p>
         </div>
         <div class="beneficio-card reveal">
+          <div class="beneficio-card__img"><img src="images/producto-tubo-3.png" alt="Exfoliación suave"></div>
           <div class="beneficio-card__icon"><i class="fa-solid fa-wind"></i></div>
           <h3>Exfoliación suave</h3>
-          <p>Micro-partículas de bambú que exfolian delicadamente sin irritar.</p>
+          <p>Micro-partículas de bamboo que exfolian delicadamente sin irritar.</p>
         </div>
         <div class="beneficio-card beneficio-card--wide reveal">
+          <div class="beneficio-card__img beneficio-card__img--wide"><img src="images/info-ingredientes.png" alt="Todo tipo de piel"></div>
+          <div class="beneficio-card__body">
           <div class="beneficio-card__icon"><i class="fa-solid fa-users"></i></div>
           <div>
             <h3>Cuidado para diferentes tipos de piel</h3>
             <p>Formulado para adaptarse a pieles normales, secas, mixtas, grasas y sensibles. Una solución universal respaldada por la naturaleza.</p>
+          </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ¿Por qué el bambú? -->
-  <section class="bambu section" id="bambu">
+  <!-- ¿Por qué el bamboo? -->
+  <section class="bambu section section--warm" id="bamboo">
     <div class="container">
       <div class="bambu__grid">
         <div class="bambu__content">
-          <span class="section__tag reveal">¿Por qué el bambú?</span>
-          <h2 class="section__title reveal">El poder milenario del bambú</h2>
+          <span class="section__tag reveal">¿Por qué el bamboo?</span>
+          <h2 class="section__title reveal">El poder milenario del bamboo</h2>
           <p class="section__text reveal">
-            El bambú contiene <strong>sílice orgánica</strong> (entre 50% y 70% en extractos estandarizados), <strong>flavonoides</strong>, aminoácidos y compuestos antioxidantes que favorecen la regeneración celular, la elasticidad y la hidratación cutánea.
+            El bamboo contiene <strong>sílice orgánica</strong> (entre 50% y 70% en extractos estandarizados), <strong>flavonoides</strong>, aminoácidos y compuestos antioxidantes que favorecen la regeneración celular, la elasticidad y la hidratación cutánea.
           </p>
           <p class="section__text reveal">
-            En Nicaragua, el bambú crece en departamentos como <strong>Matagalpa, Jinotega, Carazo y Rivas</strong>, pero su uso industrial en cosmética aún es limitado. BambuSkin Lab aprovecha este recurso autóctono con propiedades exfoliantes suaves, antibacterianas y regenerativas documentadas científicamente.
+            En Nicaragua, el bamboo crece en departamentos como <strong>Matagalpa, Jinotega, Carazo y Rivas</strong>, pero su uso industrial en cosmética aún es limitado. BambooSkin Lab aprovecha este recurso autóctono con propiedades exfoliantes suaves, antibacterianas y regenerativas documentadas científicamente.
           </p>
         </div>
         <div class="bambu__image reveal">
-          <img src="https://images.unsplash.com/photo-1518534716271-96a814170f2f?w=800&q=80" alt="Bambú verde en bosque natural">
+          <img src="images/producto-frasco.png" alt="Exfoliante natural con esencia de bamboo">
+          <div class="bambu__image-stack">
+            <img src="images/producto-jarras.png" alt="Colección BambooSkin Lab">
+            <img src="images/tote-bag.png" alt="Empaque sostenible BambooSkin Lab">
+          </div>
         </div>
       </div>
       <div class="bambu__cards">
@@ -236,7 +289,7 @@
   <!-- Estadísticas -->
   <section class="estadisticas section section--dark" id="estadisticas">
     <div class="estadisticas__bg">
-      <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1920&q=80" alt="Cuidado facial profesional">
+      <img src="images/info-exfoliante.png" alt="Exfoliante de bambú BambooSkin Lab">
       <div class="estadisticas__overlay"></div>
     </div>
     <div class="container estadisticas__content">
@@ -301,7 +354,7 @@
             </div>
           </div>
           <h3>Dispuestos a probar</h3>
-          <p>estaría dispuesto a probar BambuSkin Lab como exfoliante a base de bambú.</p>
+          <p>estaría dispuesto a probar BambooSkin Lab como exfoliante a base de bamboo.</p>
         </div>
       </div>
       <div class="estadisticas__bar-chart reveal">
@@ -336,7 +389,7 @@
             <span class="bar-chart__value">62.9%</span>
           </div>
           <div class="bar-chart__item">
-            <span class="bar-chart__label">Dispuesto a probar BambuSkin</span>
+            <span class="bar-chart__label">Dispuesto a probar BambooSkin</span>
             <div class="bar-chart__track">
               <div class="bar-chart__fill" data-width="70.7"></div>
             </div>
@@ -355,30 +408,41 @@
   </section>
 
   <!-- Mercado y Validación -->
-  <section class="mercado section" id="mercado">
+  <section class="mercado section section--alt" id="mercado">
+    <div class="mercado__visual reveal">
+      <img src="images/producto-linea.png" alt="Línea de productos BambooSkin Lab">
+      <div class="mercado__visual-overlay">
+        <span><i class="fa-solid fa-store"></i> Mercado nicaragüense</span>
+        <strong>Skincare accesible y natural</strong>
+      </div>
+    </div>
     <div class="container">
       <div class="section__header reveal">
         <span class="section__tag">Mercado nicaragüense</span>
         <h2 class="section__title">Oportunidad y posicionamiento</h2>
-        <p class="section__subtitle">BambuSkin Lab responde a una necesidad real identificada en la investigación de mercado de Managua.</p>
+        <p class="section__subtitle">BambooSkin Lab responde a una necesidad real identificada en la investigación de mercado de Managua.</p>
       </div>
       <div class="mercado__grid">
         <div class="mercado-card reveal">
+          <div class="mercado-card__img"><img src="images/producto-tubo-4.png" alt="Producto nacional"></div>
           <div class="mercado-card__icon"><i class="fa-solid fa-chart-line"></i></div>
           <h3>Brecha en el mercado</h3>
           <p>Productos importados (Cetaphil, CeraVe, Nivea) dominan con precios de 500–1,500 C$. Solo el 8.2% conoce marcas locales naturales. Existe espacio para una alternativa nacional.</p>
         </div>
         <div class="mercado-card reveal">
+          <div class="mercado-card__img"><img src="images/tote-bag.png" alt="Precio accesible"></div>
           <div class="mercado-card__icon"><i class="fa-solid fa-tags"></i></div>
           <h3>Precio accesible</h3>
-          <p>El 45.6% paga entre 251–400 córdobas por exfoliantes. El 65.6% indica que el precio influye siempre en su decisión de compra. BambuSkin Lab se posiciona como opción accesible.</p>
+          <p>El 45.6% paga entre 251–400 córdobas por exfoliantes. El 65.6% indica que el precio influye siempre en su decisión de compra. BambooSkin Lab se posiciona como opción accesible.</p>
         </div>
         <div class="mercado-card reveal">
+          <div class="mercado-card__img"><img src="images/producto-frasco.png" alt="Público objetivo"></div>
           <div class="mercado-card__icon"><i class="fa-solid fa-bullseye"></i></div>
           <h3>Público objetivo</h3>
           <p>Hombres y mujeres de 18 a 40 años en Managua, interesados en skincare, productos naturales y consumo responsable. Incluye pieles con acné, grasa o sensibles.</p>
         </div>
         <div class="mercado-card reveal">
+          <div class="mercado-card__img"><img src="images/producto-tubo-5.png" alt="Redes sociales"></div>
           <div class="mercado-card__icon"><i class="fa-solid fa-share-nodes"></i></div>
           <h3>Canales digitales</h3>
           <p>El 41.9% compraría por redes sociales con envío. TikTok (68.7%), Instagram (68.2%) y WhatsApp (66.6%) son los medios preferidos para conocer el producto.</p>
@@ -387,8 +451,8 @@
       <div class="mercado__validation reveal">
         <div class="mercado__validation-content">
           <span class="section__tag">Validación del producto</span>
-          <h3>El 70.7% estaría dispuesto a probar BambuSkin Lab</h3>
-          <p>La investigación confirma aceptación favorable hacia un exfoliante facial natural a base de bambú con respaldo dermatológico. El 37.6% lo recomendaría si cumple con lo prometido, y el 49.9% se mantiene neutral hasta probarlo.</p>
+          <h3>El 70.7% estaría dispuesto a probar BambooSkin Lab</h3>
+          <p>La investigación confirma aceptación favorable hacia un exfoliante facial natural a base de bamboo con respaldo dermatológico. El 37.6% lo recomendaría si cumple con lo prometido, y el 49.9% se mantiene neutral hasta probarlo.</p>
           <div class="mercado__promo">
             <div class="mercado__promo-item">
               <i class="fa-solid fa-gift"></i>
@@ -401,6 +465,7 @@
           </div>
         </div>
         <div class="mercado__validation-visual">
+          <img src="images/info-beneficios.png" alt="Validación del producto" class="mercado__validation-img">
           <div class="mercado__big-stat">
             <span class="counter" data-target="70.7">0</span><span>%</span>
             <p>Aceptación inicial</p>
@@ -411,29 +476,32 @@
   </section>
 
   <!-- Sostenibilidad -->
-  <section class="sostenibilidad section" id="sostenibilidad">
+  <section class="sostenibilidad section section--warm" id="sostenibilidad">
     <div class="container">
       <div class="section__header reveal">
         <span class="section__tag">Sostenibilidad</span>
         <h2 class="section__title">Cuidamos tu piel y el planeta</h2>
-        <p class="section__subtitle">El bambú nicaragüense es un recurso sostenible con rápido crecimiento y bajo impacto ambiental, ideal para la industria cosmética responsable.</p>
+        <p class="section__subtitle">El bamboo nicaragüense es un recurso sostenible con rápido crecimiento y bajo impacto ambiental, ideal para la industria cosmética responsable.</p>
       </div>
       <div class="sostenibilidad__grid">
         <div class="sosten-card reveal">
+          <div class="sosten-card__bg"><img src="images/tote-bag.png" alt=""></div>
           <div class="sosten-card__illustration">
             <i class="fa-solid fa-seedling"></i>
           </div>
           <h3>Recurso Local</h3>
-          <p>Aprovechamos el bambú cultivado en Matagalpa, Jinotega, Carazo y Rivas, fortaleciendo la economía nacional y reduciendo dependencia de importaciones.</p>
+          <p>Aprovechamos el bamboo cultivado en Matagalpa, Jinotega, Carazo y Rivas, fortaleciendo la economía nacional y reduciendo dependencia de importaciones.</p>
         </div>
         <div class="sosten-card reveal">
+          <div class="sosten-card__bg"><img src="images/producto-linea.png" alt=""></div>
           <div class="sosten-card__illustration">
             <i class="fa-solid fa-tree"></i>
           </div>
           <h3>Crecimiento Rápido</h3>
-          <p>El bambú es uno de los recursos renovables de mayor velocidad de regeneración, con amplio potencial ecológico según la INBAR.</p>
+          <p>El bamboo es uno de los recursos renovables de mayor velocidad de regeneración, con amplio potencial ecológico según la INBAR.</p>
         </div>
         <div class="sosten-card reveal">
+          <div class="sosten-card__bg"><img src="images/producto-jarras.png" alt=""></div>
           <div class="sosten-card__illustration">
             <i class="fa-solid fa-cloud"></i>
           </div>
@@ -441,6 +509,7 @@
           <p>Absorbe significativamente más dióxido de carbono que especies arbóreas equivalentes, contribuyendo a la purificación del aire.</p>
         </div>
         <div class="sosten-card reveal">
+          <div class="sosten-card__bg"><img src="images/producto-frasco.png" alt=""></div>
           <div class="sosten-card__illustration">
             <i class="fa-solid fa-water"></i>
           </div>
@@ -449,11 +518,11 @@
         </div>
       </div>
       <div class="sostenibilidad__banner reveal">
-        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&q=80" alt="Bosque natural sostenible">
+        <img src="images/bamboo-natural.png" alt="Bamboo natural sostenible">
         <div class="sostenibilidad__banner-content">
           <i class="fa-solid fa-earth-americas"></i>
           <h3>Producción local, impacto positivo</h3>
-          <p>BambuSkin Lab impulsa el emprendimiento nacional, el aprovechamiento responsable de recursos autóctonos y una industria cosmética más inclusiva y sostenible en Nicaragua.</p>
+          <p>BambooSkin Lab impulsa el emprendimiento nacional, el aprovechamiento responsable de recursos autóctonos y una industria cosmética más inclusiva y sostenible en Nicaragua.</p>
         </div>
       </div>
     </div>
@@ -464,108 +533,44 @@
     <div class="container">
       <div class="section__header reveal">
         <span class="section__tag">Galería</span>
-        <h2 class="section__title">La experiencia BambuSkin</h2>
+        <h2 class="section__title">La experiencia BambooSkin</h2>
         <p class="section__subtitle">Descubre la estética y la esencia de nuestra marca a través de imágenes que inspiran bienestar.</p>
       </div>
       <div class="galeria__grid">
         <div class="galeria__item galeria__item--large reveal">
-          <img src="https://images.unsplash.com/photo-1620916566395-6a4d7043b36c?w=800&q=80" alt="Mockup producto skincare">
+          <img src="images/producto-jarras.png" alt="Colección de exfoliantes BambooSkin Lab">
           <div class="galeria__overlay">
             <span>Producto Premium</span>
           </div>
         </div>
-        <div class="galeria__item reveal">
-          <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&q=80" alt="Cuidado facial natural">
+        <div class="galeria__item galeria__item--info reveal">
+          <img src="images/info-modo-uso.png" alt="Modo de uso del exfoliante">
           <div class="galeria__overlay">
-            <span>Rutina Facial</span>
+            <span>Modo de Uso</span>
           </div>
         </div>
-        <div class="galeria__item reveal">
-          <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=600&q=80" alt="Ingredientes naturales">
+        <div class="galeria__item galeria__item--info reveal">
+          <img src="images/info-ingredientes.png" alt="Ingredientes clave y beneficios">
           <div class="galeria__overlay">
             <span>Ingredientes Puros</span>
           </div>
         </div>
         <div class="galeria__item reveal">
-          <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&q=80" alt="Piel saludable y radiante">
+          <img src="images/producto-frasco.png" alt="Exfoliante de bambú">
           <div class="galeria__overlay">
             <span>Piel Radiante</span>
           </div>
         </div>
-        <div class="galeria__item galeria__item--wide reveal">
-          <img src="https://images.unsplash.com/photo-1608245448859-25a5d46b3166?w=900&q=80" alt="Cosmética natural ecológica">
+        <div class="galeria__item galeria__item--wide galeria__item--info reveal">
+          <img src="images/info-beneficios.png" alt="Beneficios del exfoliante de bambú">
           <div class="galeria__overlay">
-            <span>Cosmética Ecológica</span>
+            <span>100% Natural</span>
           </div>
         </div>
         <div class="galeria__item reveal">
-          <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&q=80" alt="Esencia de bambú">
+          <img src="images/producto-tubo-1.png" alt="Exfoliante en tubo BambooSkin Lab">
           <div class="galeria__overlay">
-            <span>Esencia de Bambú</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonios -->
-  <section class="testimonios section" id="testimonios">
-    <div class="container">
-      <div class="section__header reveal">
-        <span class="section__tag">Testimonios</span>
-        <h2 class="section__title">Lo que dicen nuestros clientes</h2>
-        <p class="section__subtitle">Opiniones ficticias basadas en el perfil del consumidor identificado en la investigación de Managua.</p>
-      </div>
-      <div class="testimonios__grid">
-        <div class="testimonio-card reveal">
-          <div class="testimonio-card__stars">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-          </div>
-          <p class="testimonio-card__text">"Luchaba con el acné por el calor de Managua. BambuSkin Lab me ayudó a controlar los brotes sin resecar mi piel. Además, es más accesible que las marcas importadas."</p>
-          <div class="testimonio-card__author">
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="José Martínez">
-            <div>
-              <strong>José Martínez</strong>
-              <span>Piel con acné · 22 años · Managua</span>
-            </div>
-          </div>
-        </div>
-        <div class="testimonio-card reveal">
-          <div class="testimonio-card__stars">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-          </div>
-          <p class="testimonio-card__text">"Me encanta que sea un producto nicaragüense con ingredientes naturales. La exfoliación es suave y mi piel se siente limpia sin esa sensación agresiva de otros productos."</p>
-          <div class="testimonio-card__author">
-            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Valeria Solís">
-            <div>
-              <strong>Valeria Solís</strong>
-              <span>Piel mixta · 30 años · Managua</span>
-            </div>
-          </div>
-        </div>
-        <div class="testimonio-card reveal">
-          <div class="testimonio-card__stars">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star-half-stroke"></i>
-          </div>
-          <p class="testimonio-card__text">"Lo compré por redes sociales y me sorprendió. Controla el exceso de grasa del clima tropical y no irrita mi piel sensible. Lo recomendaría si sigue funcionando así."</p>
-          <div class="testimonio-card__author">
-            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="Andrea Vega">
-            <div>
-              <strong>Andrea Vega</strong>
-              <span>Piel grasa · 27 años · Managua</span>
-            </div>
+            <span>Esencia de Bamboo</span>
           </div>
         </div>
       </div>
@@ -575,15 +580,15 @@
   <!-- Sección Final -->
   <section class="cta-final section" id="cta">
     <div class="cta-final__bg">
-      <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=1920&q=80" alt="Naturaleza y bienestar">
+      <img src="images/producto-jarras.png" alt="BambooSkin Lab — cuidado natural">
       <div class="cta-final__overlay"></div>
     </div>
     <div class="container cta-final__content reveal">
       <i class="fa-solid fa-leaf cta-final__icon"></i>
       <h2>Tu piel merece lo mejor de la naturaleza nicaragüense</h2>
-      <p>Descubre el poder regenerador del bambú y transforma tu rutina de cuidado facial con BambuSkin Lab. Una propuesta que combina ciencia dermatológica, recursos locales y accesibilidad para el bienestar de la piel en Nicaragua.</p>
+      <p>Descubre el poder regenerador del bamboo y transforma tu rutina de cuidado facial con BambooSkin Lab. Una propuesta que combina ciencia dermatológica, recursos locales y accesibilidad para el bienestar de la piel en Nicaragua.</p>
       <a href="#producto" class="btn btn--primary">
-        <span>Descubre BambuSkin Lab</span>
+        <span>Descubre BambooSkin Lab</span>
         <i class="fa-solid fa-arrow-right"></i>
       </a>
     </div>
@@ -595,7 +600,7 @@
       <div class="qr__grid">
         <div class="qr__content reveal">
           <span class="section__tag">Código QR</span>
-          <h2 class="section__title">Comparte BambuSkin Lab al instante</h2>
+          <h2 class="section__title">Comparte BambooSkin Lab al instante</h2>
           <p class="section__text">
             Escanea el código QR con la cámara de tu celular para abrir la página web desde cualquier dispositivo. Ideal para compartir en presentaciones, redes sociales o material impreso del proyecto.
           </p>
@@ -624,6 +629,7 @@
         </div>
         <div class="qr__card reveal">
           <div class="qr__card-inner">
+            <img src="images/producto-frasco.png" alt="Producto BambooSkin" class="qr__product-img">
             <div id="qrcode"></div>
             <p class="qr__card-label">
               <i class="fa-solid fa-qrcode"></i>
@@ -641,10 +647,10 @@
       <div class="footer__grid">
         <div class="footer__brand">
           <a href="#inicio" class="footer__logo">
-            <span class="nav__logo-icon"><i class="fa-solid fa-leaf"></i></span>
-            BambuSkin<span class="nav__logo-accent">Lab</span>
+            <img src="images/logo.png" alt="BambooSkin Lab" class="nav__logo-img">
+            BambooSkin<span class="nav__logo-accent">Lab</span>
           </a>
-          <p>La ciencia natural del cuidado facial. Exfoliante y limpiador facial con esencia de bambú, elaborado en Nicaragua.</p>
+          <p>La ciencia natural del cuidado facial. Exfoliante y limpiador facial con esencia de bamboo, elaborado en Nicaragua.</p>
           <div class="footer__social">
             <a href="https://www.instagram.com/sxn_nchez?igsh=MXZsOTlrZGI1OThvYg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
             <a href="https://www.facebook.com/share/1E3irfCTey/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
@@ -657,7 +663,7 @@
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#producto">Producto</a></li>
             <li><a href="#beneficios">Beneficios</a></li>
-            <li><a href="#bambu">El Bambú</a></li>
+            <li><a href="#bamboo">El Bamboo</a></li>
             <li><a href="#galeria">Galería</a></li>
           </ul>
         </div>
@@ -667,7 +673,6 @@
             <li><a href="#estadisticas">Investigación</a></li>
             <li><a href="#mercado">Mercado</a></li>
             <li><a href="#sostenibilidad">Sostenibilidad</a></li>
-            <li><a href="#testimonios">Testimonios</a></li>
             <li><a href="#qr">Código QR</a></li>
             <li><a href="#">Política de privacidad</a></li>
             <li><a href="#">Términos de uso</a></li>
@@ -676,15 +681,15 @@
         <div class="footer__contact">
           <h4>Contacto</h4>
           <ul>
-            <li><i class="fa-solid fa-envelope"></i> hola@bambuskinlab.com</li>
+            <li><i class="fa-solid fa-envelope"></i> hola@bambooskinlab.com</li>
             <li><i class="fa-solid fa-phone"></i> <a href="https://wa.me/50583656213" target="_blank" rel="noopener noreferrer">+505 8365 6213</a></li>
             <li><i class="fa-solid fa-location-dot"></i> Managua, Nicaragua</li>
           </ul>
         </div>
       </div>
       <div class="footer__bottom">
-        <p>&copy; 2026 BambuSkin Lab. Todos los derechos reservados. Por Jairo Sánchez y José Ángulo.</p>
-        <p>Hecho con <i class="fa-solid fa-heart"></i> y esencia de bambú</p>
+        <p>&copy; 2026 BambooSkin Lab. Todos los derechos reservados. Por Jairo Sánchez y José Ángulo.</p>
+        <p>Hecho con <i class="fa-solid fa-heart"></i> y esencia de bamboo</p>
       </div>
     </div>
   </footer>
